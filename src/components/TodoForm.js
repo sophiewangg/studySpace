@@ -1,13 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 
 function TodoForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
 
   const inputRef = useRef(null);
 
-  useEffect(() => {
+  // automatically places cursor in text-input-box -- doesn't work great with settings modal 
+  /*useEffect(() => {
     inputRef.current.focus();
-  });
+  });*/
 
   const handleChange = e => {
     setInput(e.target.value);
@@ -28,7 +29,7 @@ function TodoForm(props) {
       {props.edit ? (
         <>
           <input
-            placeholder='Update your item'
+            placeholder='update your item'
             value={input}
             onChange={handleChange}
             name='text'
@@ -36,13 +37,13 @@ function TodoForm(props) {
             className='todo-input edit'
           />
           <button onClick={handleSubmit} className='todo-button edit'>
-            Update
+            update
           </button>
         </>
       ) : (
         <>
           <input
-            placeholder='Add a todo'
+            placeholder='add a todo'
             value={input}
             onChange={handleChange}
             name='text'

@@ -13,7 +13,6 @@ function TodoList() {
     const newTodos = [todo, ...todos];
 
     setTodos(newTodos);
-    console.log(...todos);
   };
 
   const updateTodo = (todoId, newValue) => {
@@ -41,8 +40,8 @@ function TodoList() {
   };
 
   return (
-    <>
-      <h1>What's the Plan for Today?</h1>
+    <div className='todo-list'>
+      <h1>what's the plan for today?</h1>
       <TodoForm onSubmit={addTodo} />
       <Todo
         todos={todos}
@@ -50,7 +49,7 @@ function TodoList() {
         removeTodo={removeTodo}
         updateTodo={updateTodo}
       />
-    </>
+    </div>
   );
 }
 

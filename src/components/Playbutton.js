@@ -1,13 +1,11 @@
-import React from 'react'
-
 function PlayButton(props) {
-    return (
-      <button {...props} className = "timer-button">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-        </svg>
-      </button>
-    );
-  }
-  
-  export default PlayButton;
+  return (
+    <button {...props}>
+      <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="#FF530F" className="bi bi-play-fill" viewBox="0 0 16 16">
+        <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z"/>
+      </svg>
+    </button>
+  );
+}
+
+export default PlayButton;

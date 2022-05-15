@@ -1,40 +1,35 @@
 import React, {useContext} from 'react';
-import BackButton from './Backbutton';
 import SettingsContext from './SettingsContext';
 
-function Settings() {
+function Settings(setWorkMinutes) {
     const settingsInfo = useContext(SettingsContext);
 
   return (
     <div className = 'settings'>
-        <label> work interval: {settingsInfo.workInterval}:00</label>
+        <label> work interval:</label>
         
         <input 
         type='number' 
-        placeholder='minutes' 
+        placeholder={settingsInfo.workMinutes}
         min='1' max='120' 
         name='number' 
         className='minInput'
-        value = {settingsInfo.workInterval}
-        onChange={event => settingsInfo.setWorkInterval(event.target.value)}
+        value = {settingsInfo.workMinutes}
+        onChange={event => settingsInfo.setWorkMinutes(event.target.value)}
         />
 
-        <label> break interval: {settingsInfo.breakInterval}:00</label>
+        <label> break interval:</label>
         
         <input type='number'
-        placeholder='minutes'
+        placeholder={settingsInfo.breakMinutes}
         min='1'
         max='120' 
         name='number' 
         className='minInput'
-        value = {settingsInfo.breakInterval}
-        onChange={event => settingsInfo.setBreakInterval(event.target.value)}/>
-        <div>
-            <BackButton onClick={() => settingsInfo.setShowSettings(false)}/> 
-        </div>
-
+        value = {settingsInfo.breakMinutes}
+        onChange={event => settingsInfo.setBreakMinutes(event.target.value)}/>
     </div>
   )
 }
 
-export default Settings
+export default Settings;

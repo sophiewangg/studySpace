@@ -4,14 +4,24 @@
   padding: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
+  color: #FF530F;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
 }
 
 .todo-app {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  width: 520px;
-  min-height: 600px;
+  min-width: 200px;
+  min-height: 200px;
   text-align: center;
   margin: 128px auto;
   border-radius: 10px;
@@ -19,7 +29,7 @@
 }
 
 h1 {
-  margin: 32px 0;
+  /*margin: 32px 0;*/
   font-size: 24px;
 }
 
@@ -33,37 +43,36 @@ h1 {
 }
 
 .todo-input {
-  padding: 14px 32px 14px 16px;
-  border-radius: 4px 0 0 4px;
-  border-bottom: 2px solid black;
+  padding: 16px;
+  border-radius: 10px 0 0 10px;
+  background-color: #FFC9A9;
+  border: #FFC9A9;
   outline: none;
-  width: 320px;
-  background: transparent;
-  color: black;
+  width: 350px;
+  color: #FF530F;
   cursor: text;
 }
 
 .todo-input::placeholder {
-  color: lightgrey;
+  color: #FFECDB;
 }
 
 .todo-button {
   padding: 16px;
-  border: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0px 10px 10px 0px;
   cursor: pointer;
   outline: none;
-  background: black;
-  color: #fff;
+  background: #FF530F;
+  color: #FFECDB;
   text-transform: capitalize;
 }
 
 .todo-input.edit {
-  border: 2px solid grey;
+  border: none;
 }
 
 .todo-button.edit {
-  background: grey;
+  background-color: #FF530F;
   padding: 16px 22px;
 }
 
@@ -78,12 +87,12 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin: 4px auto;
-  color: black;
-  background: transparent;
+  color: #FF530F;
+  background: #FFC9A9;
   padding: 16px;
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 90%;
+  border: none;
+  border-radius: 10px;
+  width: 70%;
 }
 
 .icons {
@@ -95,16 +104,16 @@ h1 {
 
 .delete-icon {
   margin-right: 5px;
-  color: black;
+  color: #FF530F;
 }
 
 .edit-icon {
-  color: black;
+  color: #FF530F;
 }
 
 button.with-text {
   width: auto;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #FFC9A9;
   border-radius: 10px;
   padding: 10px 20px;
   font-size: 1.4rem;
@@ -121,4 +130,66 @@ label {
   margin-bottom: 10px;
   margin-top: 20px;
   text-transform: capitalize;
+}
+
+.progress-bar {
+  height: 380px;
+  color: #FF530F;
+}
+
+button {
+  border: none;
+  background-color: #FFECDB;
+  padding: 4px;
+  margin: 10px 0;
+}
+
+.welcome, .flex-container {
+  height: 100vh;
+  width:100%;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.welcome {
+  background-color: #FFC9A9;
+  color: #FF530F;
+}
+
+.title {
+  font-size: 20vh;
+  padding: 5% 5% 10% 5%;
+}
+
+.flex-container {
+  background-color: #FFECDB;
+}
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.settings-button {
+  margin-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  border: none; 
+  background-color: #FFECDB;
+}
+
+button {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+button:hover {
+  cursor: pointer;
 }

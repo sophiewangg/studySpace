@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/studySpace/static/css/main.da204c88.css",
+    "main.js": "/studySpace/static/js/main.d5ea77dc.js",
+    "index.html": "/studySpace/index.html",
+    "main.da204c88.css.map": "/studySpace/static/css/main.da204c88.css.map",
+    "main.d5ea77dc.js.map": "/studySpace/static/js/main.d5ea77dc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da204c88.css",
+    "static/js/main.d5ea77dc.js"
+  ]
+}
